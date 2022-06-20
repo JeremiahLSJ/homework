@@ -1,5 +1,5 @@
 <template>
-  <div class="App">
+<div class="App">
     <table>
       <h4>欢迎光临_vue开发的收银系统_水果店</h4>
       <div>苹果10￥/斤，折扣8折</div>
