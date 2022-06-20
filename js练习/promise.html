@@ -8,21 +8,38 @@
 </head>
 <body>
   <script>
-    const p = new Promise((resolve, reject) => {
-        console.log(333)
-        resolve()
-      }).then(() => {
-        setTimeout(() => {
-          myConsole()
-      },2000)
-    })
-    function sleep(){
+    // const p = new Promise((resolve, reject) => {
+    //     console.log(333)
+    //     resolve()
+    //   }).then(() => {
+    //     setTimeout(() => {
+    //       myConsole()
+    //   },2000)
+    // })
+    // function sleep(){
+    //   console.log(111)
+    // }
+    // function myConsole(){
+    //   sleep()
+    //   console.log('你好,世界')
+    // }
 
+
+
+    function sleep(){
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve()
+      },2000)
+      })
     }
     function myConsole(){
-      sleep()
-      console.log('你好,世界')
+      sleep().then(() => {
+        console.log('你好,世界')
+      })
     }
+
+
     
   </script>
 </body>
